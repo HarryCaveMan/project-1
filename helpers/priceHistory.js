@@ -47,7 +47,7 @@ const fetchAlltickers = () => {
         fetchTicker(currentTicker)
         .then(prices =>
             prices.forEach(price =>
-                fs.writeFile(JSON.stringify(price),console.log(price))
+                fs.writeFile(JSON.stringify(price),() => console.log(price))
             )
         )
         .catch(err => console.log(`failed to fetch prices for ${currentTicker}, error:\n${err}`))
