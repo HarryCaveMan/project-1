@@ -8,7 +8,7 @@ var router = express.Router()
 var io = require('socket.io')(http);
 
 // Utils
-var priceHistory = require('./helpers/priceHistory');
+//var priceHistory = require('./helpers/priceHistory');
 
 // Models
 var Message = require('./models/Message.js');
@@ -64,7 +64,7 @@ app.get('/api/history/:currency' , function(req,res){
 		} else {
 			res.json( data );
 		}
-	} ).sort({ date : -1 }).limit(7);
+	} ).sort({ date : -1 }).limit(25);
 });
 
 
