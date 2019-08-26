@@ -2,3 +2,4 @@
 /node_modules
 /assets/javascript/config.js
 env.json
+.serverless
